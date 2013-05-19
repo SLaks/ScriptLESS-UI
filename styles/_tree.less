@@ -1,16 +1,4 @@
-﻿@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400);
-
-body {
-	font-family: 'Source Sans Pro', sans-serif;
-}
-
-@linkColor: blue;
-@visitedLinkColor: spin(@linkColor, 5%);
-@hoverLinkColor: darken(@linkColor, 15%);
-
-input {
-	display: none;
-}
+﻿@import-once url('_variables.less');
 
 .Tree ul {
 	-moz-user-select: none;
@@ -59,8 +47,8 @@ input {
 			display: none;
 		}
 	}
-
-	li > input:checked ~ label { 
+	// Using + instead of ~ triggers a web
+	li > input:checked ~ label {
 		&:before {
 			content: '▾';
 		}
@@ -71,17 +59,14 @@ input {
 	}
 }
 
-.Selectable(@name) {
-	(~'#@{name}:target') {
-		(~'~ aside li > a[href="#@{name}"], #@{name}:target ~ aside li > label[for="expand-@{name}"]') {
-			border: 1px solid #11e;
-			background-color: #88f;
-			color: #008;
+.Tree {
+	.Selectable(@name) {
+		(~'#@{name}:target') {
+			(~'~ aside li > a[href="#@{name}"], #@{name}:target ~ aside li > label[for="expand-@{name}"]') {
+				border: 1px solid #11e;
+				background-color: #88f;
+				color: #008;
+			}
 		}
 	}
 }
-
-.Selectable(scenes);
-.Selectable(icons);
-.Selectable(faces);
-.Selectable(sounds);
