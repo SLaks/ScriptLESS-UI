@@ -1,8 +1,9 @@
-﻿@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400);
+﻿@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400);
 @import-once url('_variables.less');
 
 body {
 	font-family: 'Source Sans Pro', sans-serif;
+	height: 100%;
 }
 
 input {
@@ -13,7 +14,8 @@ input {
 	.Tree.Selectable(@name);
 }
 
-@import-once url('_tree.less');
+@import-once url(_tree.less);
+@import-once url(_layout.less);
 
 .Folder(scenes);
 .Folder(icons);

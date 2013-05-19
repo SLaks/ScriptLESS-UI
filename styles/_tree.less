@@ -5,7 +5,10 @@
 	-ms-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
-	margin-left: 20px;
+	// Nested subfolder lists get padding
+	li ul {
+		margin-left: @wideSpacing;
+	}
 	// These properties don't apply to <a>s inside <labels> (for expandable selectable nodes)
 	li > a, li > label, &:after {
 		padding: 2px 4px;

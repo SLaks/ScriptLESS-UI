@@ -1,6 +1,7 @@
-﻿@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400);
+﻿@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400);
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  height: 100%;
 }
 input {
   display: none;
@@ -10,6 +11,8 @@ input {
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+}
+.Tree ul li ul {
   margin-left: 20px;
 }
 .Tree ul li > a,
@@ -56,6 +59,15 @@ input {
 }
 .Tree ul li > input:checked ~ label + ul {
   display: block;
+}
+h2 {
+  font-size: 24px;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+aside.Tree {
+  height: 100%;
+  padding: 20px;
 }
 #scenes:target ~ aside li > a[href="#scenes"], #scenes:target ~ aside li > label[for="expand-scenes"] {
   border: 1px solid #11e;
