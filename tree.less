@@ -1,0 +1,87 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400);
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+@linkColor: blue;
+@visitedLinkColor: spin(@linkColor, 5%);
+@hoverLinkColor: darken(@linkColor, 15%);
+
+input {
+	display: none;
+}
+
+.Tree ul {
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	margin-left: 20px;
+	// These properties don't apply to <a>s inside <labels> (for expandable selectable nodes)
+	li > a, li > label, &:after {
+		padding: 2px 4px;
+		margin-bottom: 4px;
+		display: block;
+		float: left;
+		clear: both;
+	}
+	// These properties are safe to nest
+	a, label, &:after {
+		cursor: pointer;
+		color: black;
+		text-decoration: none;
+
+		&:hover {
+			color: #008;
+		}
+
+		&:before {
+			width: 14px;
+			display: inline-block;
+		}
+	}
+
+	ul:empty:after {
+		content: '▪ (no subfolders)';
+	}
+
+	li > a:before {
+		content: '▪';
+	}
+	// Subfolder lists should be hidden unless their checkbox is checked
+	li > input + label {
+		&:before {
+			content: '▸';
+		}
+
+		+ ul {
+			display: none;
+		}
+	}
+
+	li > input:checked ~ label { 
+		&:before {
+			content: '▾';
+		}
+
+		+ ul {
+			display: block;
+		}
+	}
+}
+
+.Selectable(@name) {
+	(~'#@{name}:target') {
+		(~'~ aside li > a[href="#@{name}"], #@{name}:target ~ aside li > label[for="expand-@{name}"]') {
+			border: 1px solid #11e;
+			background-color: #88f;
+			color: #008;
+		}
+	}
+}
+
+.Selectable(scenes);
+.Selectable(icons);
+.Selectable(faces);
+.Selectable(sounds);

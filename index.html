@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>ScriptLESS UI</title>
+		<link href="reset.css" rel="stylesheet" />
+		<link href="tree.css" rel="stylesheet" />
+	</head>
+
+	<body>
+
+		<div id="all-files"></div>
+		<div id="scenes"></div>
+		<div id="icons"></div>
+		<div id="sounds"></div>
+		<div id="faces"></div>
+
+		<aside class="Tree">
+			<ul>
+				<li>
+					<input type="checkbox" id="expand-files" />
+					<label for="expand-files">Files</label>
+					<ul>
+						<li><a href="#all-files">All</a></li>
+						<li>
+							<input type="checkbox" id="expand-images" />
+							<label for="expand-images">Images</label>
+							<ul>
+								<li><a href="#scenes">Scenes</a></li>
+								<li><a href="#icons">Icons</a></li>
+								<li><a href="#faces">Faces</a></li>
+							</ul>
+						</li>
+						<li>
+							<input type="checkbox" id="expand-sounds" />
+							<label for="expand-sounds" title="Click the arrow to expand this empty node"><a href="#sounds">Sounds</a></label>
+							<ul></ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<input type="checkbox" id="expand-contacts" />
+					<label for="expand-contacts">Contacts</label>
+					<ul></ul>
+				</li>
+			</ul>
+		</aside>
+	</body>
+
+</html>
