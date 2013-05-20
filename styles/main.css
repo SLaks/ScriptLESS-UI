@@ -69,23 +69,163 @@ aside.Tree {
   height: 100%;
   padding: 20px;
 }
-#scenes:target ~ aside li > a[href="#scenes"], #scenes:target ~ aside li > label[for="expand-scenes"] {
-  border: 1px solid #11e;
-  background-color: #88f;
-  color: #008;
+#color-red:checked ~ #scenes:target ~ aside li > label[for="expand-scenes"] {
+  border: 1px solid #ee1111;
+  background-color: #ff8888;
+  color: #880000;
 }
-#icons:target ~ aside li > a[href="#icons"], #icons:target ~ aside li > label[for="expand-icons"] {
-  border: 1px solid #11e;
-  background-color: #88f;
-  color: #008;
+#color-green:checked ~ #scenes:target ~ aside li > label[for="expand-scenes"] {
+  border: 1px solid #087708;
+  background-color: #88ff88;
+  color: #008800;
 }
-#faces:target ~ aside li > a[href="#faces"], #faces:target ~ aside li > label[for="expand-faces"] {
-  border: 1px solid #11e;
-  background-color: #88f;
-  color: #008;
+#color-blue:checked ~ #scenes:target ~ aside li > label[for="expand-scenes"] {
+  border: 1px solid #1111ee;
+  background-color: #8888ff;
+  color: #000088;
 }
-#sounds:target ~ aside li > a[href="#sounds"], #sounds:target ~ aside li > label[for="expand-sounds"] {
-  border: 1px solid #11e;
-  background-color: #88f;
-  color: #008;
+#color-orange:checked ~ #scenes:target ~ aside li > label[for="expand-scenes"] {
+  border: 1px solid #eea111;
+  background-color: #ffd588;
+  color: #885800;
+}
+#color-red:checked ~ #scenes:target ~ aside li > a[href="#scenes"] {
+  border: 1px solid #ee1111;
+  background-color: #ff8888;
+  color: #880000;
+}
+#color-green:checked ~ #scenes:target ~ aside li > a[href="#scenes"] {
+  border: 1px solid #087708;
+  background-color: #88ff88;
+  color: #008800;
+}
+#color-blue:checked ~ #scenes:target ~ aside li > a[href="#scenes"] {
+  border: 1px solid #1111ee;
+  background-color: #8888ff;
+  color: #000088;
+}
+#color-orange:checked ~ #scenes:target ~ aside li > a[href="#scenes"] {
+  border: 1px solid #eea111;
+  background-color: #ffd588;
+  color: #885800;
+}
+#color-red:checked ~ #icons:target ~ aside li > label[for="expand-icons"] {
+  border: 1px solid #ee1111;
+  background-color: #ff8888;
+  color: #880000;
+}
+#color-green:checked ~ #icons:target ~ aside li > label[for="expand-icons"] {
+  border: 1px solid #087708;
+  background-color: #88ff88;
+  color: #008800;
+}
+#color-blue:checked ~ #icons:target ~ aside li > label[for="expand-icons"] {
+  border: 1px solid #1111ee;
+  background-color: #8888ff;
+  color: #000088;
+}
+#color-orange:checked ~ #icons:target ~ aside li > label[for="expand-icons"] {
+  border: 1px solid #eea111;
+  background-color: #ffd588;
+  color: #885800;
+}
+#color-red:checked ~ #icons:target ~ aside li > a[href="#icons"] {
+  border: 1px solid #ee1111;
+  background-color: #ff8888;
+  color: #880000;
+}
+#color-green:checked ~ #icons:target ~ aside li > a[href="#icons"] {
+  border: 1px solid #087708;
+  background-color: #88ff88;
+  color: #008800;
+}
+#color-blue:checked ~ #icons:target ~ aside li > a[href="#icons"] {
+  border: 1px solid #1111ee;
+  background-color: #8888ff;
+  color: #000088;
+}
+#color-orange:checked ~ #icons:target ~ aside li > a[href="#icons"] {
+  border: 1px solid #eea111;
+  background-color: #ffd588;
+  color: #885800;
+}
+#color-red:checked ~ #faces:target ~ aside li > label[for="expand-faces"] {
+  border: 1px solid #ee1111;
+  background-color: #ff8888;
+  color: #880000;
+}
+#color-green:checked ~ #faces:target ~ aside li > label[for="expand-faces"] {
+  border: 1px solid #087708;
+  background-color: #88ff88;
+  color: #008800;
+}
+#color-blue:checked ~ #faces:target ~ aside li > label[for="expand-faces"] {
+  border: 1px solid #1111ee;
+  background-color: #8888ff;
+  color: #000088;
+}
+#color-orange:checked ~ #faces:target ~ aside li > label[for="expand-faces"] {
+  border: 1px solid #eea111;
+  background-color: #ffd588;
+  color: #885800;
+}
+#color-red:checked ~ #faces:target ~ aside li > a[href="#faces"] {
+  border: 1px solid #ee1111;
+  background-color: #ff8888;
+  color: #880000;
+}
+#color-green:checked ~ #faces:target ~ aside li > a[href="#faces"] {
+  border: 1px solid #087708;
+  background-color: #88ff88;
+  color: #008800;
+}
+#color-blue:checked ~ #faces:target ~ aside li > a[href="#faces"] {
+  border: 1px solid #1111ee;
+  background-color: #8888ff;
+  color: #000088;
+}
+#color-orange:checked ~ #faces:target ~ aside li > a[href="#faces"] {
+  border: 1px solid #eea111;
+  background-color: #ffd588;
+  color: #885800;
+}
+#color-red:checked ~ #sounds:target ~ aside li > label[for="expand-sounds"] {
+  border: 1px solid #ee1111;
+  background-color: #ff8888;
+  color: #880000;
+}
+#color-green:checked ~ #sounds:target ~ aside li > label[for="expand-sounds"] {
+  border: 1px solid #087708;
+  background-color: #88ff88;
+  color: #008800;
+}
+#color-blue:checked ~ #sounds:target ~ aside li > label[for="expand-sounds"] {
+  border: 1px solid #1111ee;
+  background-color: #8888ff;
+  color: #000088;
+}
+#color-orange:checked ~ #sounds:target ~ aside li > label[for="expand-sounds"] {
+  border: 1px solid #eea111;
+  background-color: #ffd588;
+  color: #885800;
+}
+#color-red:checked ~ #sounds:target ~ aside li > a[href="#sounds"] {
+  border: 1px solid #ee1111;
+  background-color: #ff8888;
+  color: #880000;
+}
+#color-green:checked ~ #sounds:target ~ aside li > a[href="#sounds"] {
+  border: 1px solid #087708;
+  background-color: #88ff88;
+  color: #008800;
+}
+#color-blue:checked ~ #sounds:target ~ aside li > a[href="#sounds"] {
+  border: 1px solid #1111ee;
+  background-color: #8888ff;
+  color: #000088;
+}
+#color-orange:checked ~ #sounds:target ~ aside li > a[href="#sounds"] {
+  border: 1px solid #eea111;
+  background-color: #ffd588;
+  color: #885800;
 }

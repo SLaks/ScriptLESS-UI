@@ -1,0 +1,37 @@
+﻿
+.Selected() {
+	.defineColor(@color, @hue, @saturation, @lightness) {
+		border: 1px solid hsl(@hue, 87%, @lightness);
+		background-color: hsl(@hue, @saturation, 76.6%);
+		color: hsl(@hue,@saturation,26.6%);
+	}
+
+	.UseColors();
+}
+
+.UseColors() {
+	// It appears to be impossible to pass a single argument to
+	// a LESS mixin and use it both as a named color and as the
+	// original string. Passing a color literal loses the name,
+	// and I can't figure out how to convert "red" to #f00.
+	#color-red:checked ~ & {
+		.defineColor(red);
+	}
+
+	#color-green:checked ~ & {
+		.defineColor(green);
+	}
+
+	#color-blue:checked ~ & {
+		.defineColor(blue);
+	}
+
+	#color-orange:checked ~ & {
+		.defineColor(orange);
+	}
+
+	.defineColor(@color) {
+		.defineColor(@color, hue(@color), saturation(@color), lightness(@color));
+	}
+}
+

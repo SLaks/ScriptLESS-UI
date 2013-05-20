@@ -1,4 +1,5 @@
-﻿@import-once url('_variables.less');
+﻿@import-once url(_variables.less);
+@import-once url(_mixins.less);
 
 .Tree ul {
 	-moz-user-select: none;
@@ -64,11 +65,13 @@
 
 .Tree {
 	.Selectable(@name) {
-		(~'#@{name}:target') {
-			(~'~ aside li > a[href="#@{name}"], #@{name}:target ~ aside li > label[for="expand-@{name}"]') {
-				border: 1px solid #11e;
-				background-color: #88f;
-				color: #008;
+		(~'#@{name}:target ~ aside li') {
+			(~'> label[for="expand-@{name}"]') {
+				.Selected();
+			}
+
+			(~'> a[href="#@{name}"]') {
+				.Selected();
 			}
 		}
 	}
