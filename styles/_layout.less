@@ -1,12 +1,22 @@
-﻿@import-once url('_variables.less');
+﻿@import-once url(_variables.less);
+@import-once url(_mixins.less);
 
 h2 {
-	font-size: 24px;
+	font-size: 36px;
 	font-weight: 200;
 	margin-bottom: @wideSpacing;
 }
 
 aside.Tree {
 	height: 100%;
+	width: 25%;
+	float: left;
 	padding: @wideSpacing;
+
+	.defineColor(@color, @hue, @saturation, @lightness) {
+		background-color: hsl(@hue, @saturation, 90%);
+	}
+
+	.UseColors();
 }
+
