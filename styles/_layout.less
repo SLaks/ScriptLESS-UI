@@ -20,3 +20,23 @@ aside.Tree {
 	.UseColors();
 }
 
+.Toolbar {
+	@size: 24px;
+	overflow: hidden;
+	font-size: @size;
+
+	> li {
+		float: left;
+
+		label {
+			width: @size;
+			height: @size;
+		}
+	}
+
+	.defineColor(@color, @hue, @saturation, @lightness) {
+		background-color: hsl(@hue, @saturation, 80%);
+	}
+
+	.UseColors();
+}
